@@ -100,4 +100,48 @@
             <li>
                 <strong>Health Care Call Center Representative</strong> - Maximus (March 2023 – Oct 2023)
                 <ul>
-                    <li>Assisted customers with inquiries, utilizing strong communication and problem-solving
+                    <li>Assisted customers with inquiries, utilizing strong communication and problem-solving skills.</li>
+                    <li>Gained exposure to data analysis and workflow optimization.</li>
+                    <li>Used ChatGPT to draft communication templates, improving consistency and efficiency.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Web Portfolio: Designed a personal portfolio website using HTML, CSS, and JavaScript.</li>
+            <li>Interactive To-Do List: Developed a dynamic to-do list application with task management features using JavaScript.</li>
+            <li>Algorithm Visualizer (C++): Created an interactive tool to demonstrate sorting algorithms with real-time feedback.</li>
+            <li>Basic E-Commerce Backend (Java): Designed a simplified backend for an e-commerce application with product management and search functionality.</li>
+            <li>AI Experimentation: Explored practical use cases of ChatGPT for task automation and content generation.</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Sophia Learning</strong> - Bachelor of Science in Computer Science (Currently Attending)
+                <ul>
+                    <li>Focused on software development, web technologies, and data structures.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>South Sutter Charter School</strong> - High School Diploma (Dec 2020)
+                <ul>
+                    <li>Completed coursework in computer science fundamentals and advanced mathematics.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: tristenmyers0123@gmail.com</p>
+        <p>Phone: (916) 769-6991</p>
+        <p>Location: Sacramento, CA</p>
+    </section>
+</body>
+</html>
