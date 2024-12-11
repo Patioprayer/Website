@@ -17,6 +17,19 @@
             padding: 1rem 0;
             text-align: center;
         }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         section {
             margin: 2rem auto;
             max-width: 800px;
@@ -38,17 +51,33 @@
             padding: 0.5rem;
             border-radius: 4px;
         }
+        .hidden {
+            display: none;
+        }
     </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
     </header>
-    <section>
+    <nav>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('projects')">Projects</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+    <section id="about">
         <h2>About Me</h2>
         <p>Hi, I'm Tristen Myers, an aspiring web developer with a passion for learning and solving real-world problems through technology.</p>
     </section>
-    <section>
+    <section id="skills" class="hidden">
         <h2>Skills</h2>
         <ul>
             <li>HTML, CSS, JavaScript</li>
@@ -56,13 +85,19 @@
             <li>AI Tools like ChatGPT and Stable Diffusion</li>
         </ul>
     </section>
-    <section>
+    <section id="projects" class="hidden">
         <h2>Projects</h2>
         <ul>
             <li>Algorithm Visualizer (C++)</li>
             <li>Basic E-Commerce Backend (Java)</li>
             <li>Interactive To-Do List (HTML, CSS, JavaScript)</li>
         </ul>
+    </section>
+    <section id="contact" class="hidden">
+        <h2>Contact Me</h2>
+        <p>Email: tristenmyers0123@gmail.com</p>
+        <p>Phone: (916) 769-6991</p>
+        <p>Location: Sacramento, CA</p>
     </section>
 </body>
 </html>
