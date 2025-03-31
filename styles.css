@@ -1,50 +1,204 @@
+/* 
+  styles.css
+  Global styling for Tristen Myers's Portfolio
+  Adjust color variables as desired to refresh the palette
+*/
+
+/* COLOR VARIABLES */
+:root {
+  --primary-color: #2c3e50;       /* Dark navy */
+  --secondary-color: #1abc9c;    /* Teal accent */
+  --background-color: #fafafa;   /* Light background */
+  --text-color: #333;            /* Primary text color */
+}
+
+/* GLOBAL RESET/BASIC STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
-header {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 1.5rem 0;
+
+/* NAVIGATION */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
 }
-nav {
-    text-align: center;
-    margin: 1rem 0;
+
+.main-nav ul li {
+  margin: 0;
 }
-nav a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+
+.main-nav ul li a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
-nav a:hover {
-    text-decoration: underline;
+
+.main-nav ul li a:hover {
+  background-color: var(--secondary-color);
 }
-section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.main-nav ul li a.active {
+  background-color: var(--secondary-color);
 }
-h1, h2 {
-    text-align: center;
+
+/* HERO SECTION (on index.html) */
+.hero {
+  background: url("images/hero_bg.jpg") center/cover no-repeat;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
 }
-p, ul {
-    margin: 1rem;
+
+/* Overlay if you want a darker shade over the hero image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-ul {
-    list-style-type: none;
-    padding: 0;
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
 }
-ul li {
-    background: #efefef;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border-radius: 4px;
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #16a085; /* Slightly darker teal */
+}
+
+/* MAIN SECTION STYLES */
+.main-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-section h1, .main-section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.main-section p {
+  margin-bottom: 1rem;
+}
+
+/* SKILLS PAGE */
+.skill-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.skill-list li {
+  background: #efefef;
+  padding: 0.5rem 0.75rem;
+  margin: 0.3rem 0;
+  border-radius: 4px;
+}
+
+/* EXPERIENCE PAGE */
+.experience-list > li {
+  margin: 1rem 0;
+  background: #efefef;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.experience-list li strong {
+  color: var(--primary-color);
+}
+
+.experience-list ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* PROJECTS PAGE */
+.project {
+  background: #efefef;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.project h2 {
+  color: var(--primary-color);
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+/* EDUCATION PAGE */
+.education-list > li {
+  background: #efefef;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.education-list ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* CONTACT PAGE */
+/* Just uses main-section styling above */
+
+/* MEDIA QUERIES (Responsive) */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-nav ul li a {
+    padding: 0.75rem 2rem;
+  }
 }
